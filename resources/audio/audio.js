@@ -15,7 +15,7 @@ function skip(x){
     index=(index+x);
     if(index>=count) index=0;
     else if(index<0) index=count-1;
-    player.src = "audio/tracks/"+songs[index][0];
+    player.src = "resources/audio/tracks/"+songs[index][0];
     player.load();
     player.play();
     
