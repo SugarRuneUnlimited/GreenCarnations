@@ -42,7 +42,7 @@ input {
 
   --bg-color-opacity1: #090033FC; /* From navbar & Autoplay */
   --bg-color-opacity2: #090033CF;
-  --innerbox-color1: #EFBCE7;
+  --innerbox-color1: #c4efbc;
   --innerbox-color2: #FFFFFFBF;
   --accentbox-color: #E0D7F596;
   --accentbox-border: #4e34e338;
@@ -58,7 +58,7 @@ input {
 
 
 body {
-        background-image: url("./assets/wall4.png");
+        background-image: url("./assets/walltest.jpg");
 	background-repeat: repeat-x repeat-y;
   font-family: var(--primary-font);
   color: darkgreen;
