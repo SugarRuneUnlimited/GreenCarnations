@@ -3,9 +3,8 @@ const title=document.getElementById("title");
 const image=document.getElementById("cd-image");
 const pause_button=document.getElementById("play-pause");
 var songs=[
-    ["door.mp3","Spring Cleaning - Deltarune Chapter 2 OST: 02 - Girl Next Door","cover.png"],
-    ["holiday.mp3", "Deltarune Chapter 2 OST: 19 - Holiday Studio ","cover.png"],
-    ["lost.mp3", "Deltarune Chapter 2 OST: 30 - Lost Girl","cover.png"]
+    ["track1.mp3","Tenebre Rosso Sangue","track1.png"],
+    ["track2.mp3", "Soft Fuzzy Man","track2.png"]
 ];
 var index=0;
 var count=songs.length;
