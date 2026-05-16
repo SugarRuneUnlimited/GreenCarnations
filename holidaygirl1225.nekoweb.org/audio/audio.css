@@ -1,0 +1,93 @@
+#audio-player{
+    width:90%;
+    background:transparent;
+    color: rgb(89, 131, 89);
+    text-align: center;
+}
+
+#audio-player > audio{
+    width:inherit;
+}
+
+#cd-rotate{
+    margin:auto;
+    padding:5%;
+    box-sizing: border-box;
+    width:inherit;
+    
+    transition: transform .3s;
+}
+
+#cd-rotate > img{
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    
+    display:block;
+    margin:auto;
+    border-radius: 50%;
+    width:20%;
+    height:20%;
+    box-sizing: border-box;
+    
+    transition:  box-shadow .3s;
+    
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#cd-rotate > img:hover{
+    box-shadow: 0 0 20px white;
+}
+
+#cd-rotate:hover{
+    transform: scale(1.2);
+}
+#cd-rotate:active{
+    transform: scale(1.1);
+}
+@media only screen and (max-width: 800px) {
+    #cd-rotate > img{
+        width:80%;
+        
+    }
+    #cd-rotate:hover{
+        transform: scale(1);
+    }
+    #cd-rotate:active{
+        transform: scale(1.1);
+    }
+}
+
+#title{
+    font-size:1.5em;
+    height:fit-content;
+    text-align: center;
+}
+#controls{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:5px;
+    box-sizing: border-box;
+}
+#controls > div{
+    font-size:2.5em;
+    transition:text-shadow .3s, transform .3s;
+}
+#controls > div:hover{
+    transform:scale(1.2);
+    text-shadow: 0 0 11px white, 0 0 11px white;
+}
+#controls > div:active{
+    transform:scale(1.1);
+    text-shadow: 0 0 11px blue, 0 0 11px blue;
+}
