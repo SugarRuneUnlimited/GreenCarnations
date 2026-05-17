@@ -20,7 +20,7 @@ function skip(x){
     player.play();
     
     title.innerHTML = songs[index][1];
-    image.src="audio/covers/" + songs[index][2];
+    image.src="resources/audio/covers/" + songs[index][2];
     pause_button.innerHTML="||";
 }
 
