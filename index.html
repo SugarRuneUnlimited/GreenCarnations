@@ -154,16 +154,28 @@
         </div>
 <script>
 function copyToClipboard(buttonId) {
-    const htmlMap = {
-        'btn1': '<a href="https://sugarruneunlimited.github.io/GreenCarnations/" target="_blank"><img style="width: 90px; height: 50px;" src="https://sugarruneunlimited.github.io/GreenCarnations/resources/assets/button.gif></a>',
+    const platform = document.getElementById('platform-select').value;
+    
+    const buttonCodes = {
+        'generic': '<a href="https://sugarruneunlimited.github.io/GreenCarnations/"><img style="width: 90px; height: 50px;" src="https://sugarruneunlimited.github.io/GreenCarnations/resources/assets/button.gif" alt="The Green Carnations" /></a>',
+        'tumblr': '<a href="https://sugarruneunlimited.github.io/GreenCarnations/"><img src="https://sugarruneunlimited.github.io/GreenCarnations/resources/assets/button.gif" alt="The Green Carnations" style="width: 90px; height: 50px;" /></a>',
+        'spacehey': '<a href="https://sugarruneunlimited.github.io/GreenCarnations/" target="_blank"><img src="https://sugarruneunlimited.github.io/GreenCarnations/resources/assets/button.gif" border="0" width="90" height="50" alt="The Green Carnations" /></a>'
     };
-
-    const textToCopy = htmlMap[buttonId];
+    
+    const textToCopy = buttonCodes[platform];
     
     navigator.clipboard.writeText(textToCopy).then(() => {
-        alert("Copied to clipboard! XD");
+        alert("Copied to clipboard! XD\nPlatform: " + platform);
     }).catch(err => {
         console.error("Uh oh, failed to copy: ", err);
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = textToCopy;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        alert("Copied to clipboard! XD\nPlatform: " + platform);
     });
 }
 </script>
